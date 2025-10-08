@@ -1,7 +1,7 @@
 node {
     stage('Preparation') { // for display purposes
         // Get some code from a GitHub repository
-        git 'https://github.com/digininja/DVWA.git'
+        git url: 'ssh://git@ssh.github.com:443/osrerf/lab01.git', credentialsId: 'Jenkins SSH GitHub'
     }
     stage('Build') {
         // Run the maven build
